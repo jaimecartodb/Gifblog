@@ -1,0 +1,8 @@
+<div class="show-gif-item">
+	<h3><%= @post.title %> </h3> <br>
+	<img class="show-gif" src="<%= @post.gif %>">
+	<h2><%= @post.num_votes %> </h2>
+
+	<div class="button-bar">
+		<%= button_to   'Vote', { :action => "increase_posts", :controller => "posts"},  method: :patch %>
+</div>

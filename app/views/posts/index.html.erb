@@ -1,0 +1,13 @@
+<div class="show-gif-item"
+	<h1>All posts</h1>
+
+	<ul id="posts">
+		<% @posts.each do |post| %>
+			<li>
+				<%= link_to post.title, post_path(post) %> <br>
+				<%= post.gif %> <br>
+			</li>
+		<% end %>
+	</ul>
+
+	<%= link_to "Create a new Post", new_post_path %>
